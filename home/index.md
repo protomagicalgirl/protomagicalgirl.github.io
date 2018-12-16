@@ -9,5 +9,6 @@
 | /insta | instagram | [https://www.instagram.com/princessproto](instagram.com/princessproto) |
 | /src | speedrun.com profile | [https://www.speedrun.com/user/protomagicalgirl](speedrun.com/user/protomagicalgirl) |
 | /mmrta | megaman rta profile | [https://www.megamanleaderboards.net/index.php?page=runner&name=protomagicalgirl](megamanleaderboards.net/index.php?page=runner&name=protomagicalgirl) |
+| /tgatrtutorial | the girl and the robot current patch speedrun tutorial | [https://youtu.be/zoxMWZ43udk](youtu.be/zoxMWZ43udk) |
 | /gm | my tgm1 gm | [https://www.youtube.com/watch?v=7--boobbcI0](youtube.com/watch?v=7--boobbcI0) |
 | /fewroute | fire emblem warriors ng+ co-op route | [https://docs.google.com/document/d/1L-tbuQSbJqY9nlDWRbZS2HHb3l7oZYNGzhPh8ivq9kk/edit?usp=sharing](docs.google.com/document/d/1L-tbuQSbJqY9nlDWRbZS2HHb3l7oZYNGzhPh8ivq9kk/edit?usp=sharing) |
