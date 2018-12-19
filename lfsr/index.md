@@ -4,7 +4,9 @@ This is an emulation of the LFSR used in Nintendo's retro gaming consoles to gen
 
 View a video demo: [youtu.be/TxlMk0-TcQw](https://youtu.be/TxlMk0-TcQw)
 
-```
+
+```C
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h> // for usleep
@@ -67,4 +69,6 @@ int main(void) {
     }
 
     return 0;
-}```
+}
+
+```
