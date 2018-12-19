@@ -1,8 +1,10 @@
-# Recorded Audio Examples for "Nintendium Philharmonic"
+# "Nintendium Philharmonic" Audio Examples & LFSR Emulation
+
+## Audio Examples
 
 These audio clips are presented for the purpose of academic research and are the property of their respective owners. I recorded these clips myself from the games' original consoles.
 
-## NES
+### NES
 
 
 <audio
@@ -41,7 +43,7 @@ Stage 1 from Akumajou Densetsu (CVIII JP)- now with expansion chip
 Overworld theme from Super Mario Bros. 3 (Koji Kondo)
 
 
-## GAME BOY
+### GAME BOY
 
 
 <audio
@@ -66,7 +68,7 @@ Voice clip from Pokémon Yellow (Junichi Masuda, Tetsuya Watanabe, voice by Ikue
 Birabuto Kingdom theme from Super Mario Land (Hip Tanaka)
 
 
-## SNES
+### SNES
 
 
 <audio
@@ -89,3 +91,7 @@ Underground theme from Super Mario World  (Koji Kondo)
 	audio recording
 </audio>
 Overworld theme from Super Mario World (Koji Kondo)
+
+## Linear-Feedback Shift Register Emulation C Code
+
+See [https://proto.ml/lfsr](proto.ml/lfsr) for the code for my LFSR emulation.
