@@ -12,13 +12,12 @@ These audio clips are presented for the purpose of academic research and are the
 </audio>
 Fire Man theme from Mega Man (Manami Matsumae)
 
-Tsutomu Ogura, Jun Funahashi)
 <audio
     controls
 	src="The Adventures of Bayou Billy.mp3">
 	audio recording
 </audio>
-Voice clip from The Adventures of Bayou Billy (Kiyohiro Sada, Hidenori Maezawa, 
+Voice clip from The Adventures of Bayou Billy (Kiyohiro Sada, Hidenori Maezawa, Tsutomu Ogura, Jun Funahashi)
 
 <audio
     controls
