@@ -94,4 +94,4 @@ Overworld theme from Super Mario World (Koji Kondo)
 
 ## Linear-Feedback Shift Register Emulation C Code
 
-See [https://proto.ml/lfsr](proto.ml/lfsr) for the code for my LFSR emulation.
+See [proto.ml/lfsr](https://proto.ml/lfsr) for the code for my LFSR emulation.
