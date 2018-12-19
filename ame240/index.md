@@ -4,83 +4,89 @@ These audio clips are presented for the purpose of academic research and are the
 
 ## NES
 
-Fire Man theme from Mega Man (Manami Matsumae)
+
 <audio
     controls
 	src="Megaman.mp3">
 	audio recording
 </audio>
+Fire Man theme from Mega Man (Manami Matsumae)
 
-Voice clip from The Adventures of Bayou Billy (Kiyohiro Sada, Hidenori Maezawa, Tsutomu Ogura, Jun Funahashi)
+Tsutomu Ogura, Jun Funahashi)
 <audio
     controls
 	src="The Adventures of Bayou Billy.mp3">
 	audio recording
 </audio>
+Voice clip from The Adventures of Bayou Billy (Kiyohiro Sada, Hidenori Maezawa, 
 
-Stage 1 from Castlevania III: Dracula's Curse (Hidenori Maezawa, Jun Funahashi, Yukie Morimoto, Yoshinori Sasaki) - no expansion chip
 <audio
     controls
 	src="Castlevania III Dracula's Curse.mp3">
 	audio recording
 </audio>
+Stage 1 from Castlevania III: Dracula's Curse (US) (Hidenori Maezawa, Jun Funahashi, Yukie Morimoto, Yoshinori Sasaki) - no expansion chip
 
-Stage 1 from Akumajou Densetsu - now with expansion chip
 <audio
     controls
 	src="Akumajou Densetsu.mp3">
 	audio recording
 </audio>
+Stage 1 from Akumajou Densetsu (CVIII JP)- now with expansion chip
 
-Overworld theme from Super Mario Bros. 3 (Koji Kondo)
 <audio
     controls
 	src="Super Mario Bros 3.mp3">
 	audio recording
 </audio>
+Overworld theme from Super Mario Bros. 3 (Koji Kondo)
 
-##GAME BOY
 
-"Wall bonk" sound effect from The Legend of Zelda: Link's Awakening (Kozue Ishikawa)
+## GAME BOY
+
+
 <audio
     controls
 	src="Links Awakening.mp3">
 	audio recording
 </audio>
+"Wall bonk" sound effect from The Legend of Zelda: Link's Awakening (Kozue Ishikawa)
 
-Voice clip from Pokémon Yellow (Junichi Masuda, Tetsuya Watanabe, voice by Ikue Ootani)
 <audio
     controls
 	src="Pokemon Yellow.mp3">
 	audio recording
 </audio>
+Voice clip from Pokémon Yellow (Junichi Masuda, Tetsuya Watanabe, voice by Ikue Ootani)
 
-Birabuto Kingdom theme from Super Mario Land (Hip Tanaka)
 <audio
     controls
 	src="Super Mario Land.mp3">
 	audio recording
 </audio>
+Birabuto Kingdom theme from Super Mario Land (Hip Tanaka)
 
-##SNES
 
-Crush Crawfish theme from Mega Man X3 (Kinuyo Yamashita)
+## SNES
+
+
 <audio
     controls
 	src="Megaman X3.mp3">
 	audio recording
 </audio>
+Crush Crawfish theme from Mega Man X3 (Kinuyo Yamashita)
 
-Underground theme from Super Mario World  (Koji Kondo)
 <audio
     controls
 	src="Super Mario World Underground.mp3">
 	audio recording
 </audio>
+Underground theme from Super Mario World  (Koji Kondo)
 
-Overworld theme from Super Mario World (Koji Kondo)
 <audio
     controls
 	src="Super Mario World Overworld.mp3">
 	audio recording
 </audio>
+Overworld theme from Super Mario World (Koji Kondo)
