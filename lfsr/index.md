@@ -2,7 +2,12 @@
 
 This is an emulation of the LFSR used in Nintendo's retro gaming consoles to generate 1-bit pseudorandom noise. The program uses the same bitwise math as the original hardware.
 
-View a video demo: [youtu.be/TxlMk0-TcQw](https://youtu.be/TxlMk0-TcQw)
+View a video demo:
+
+<video width="720" height="480" controls>
+	<source src="lfsrdemo.mp4">
+	Your browser does not support the video tag.
+</video>
 
 
 ```C
