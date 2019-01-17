@@ -12,6 +12,9 @@ this was a test file
 
 hey, here's a fun fact[^1]!
 
+here's another one[^john]!
+
 here's some more random information.
 
 [^1]: sorry we didn't source our info like some kinda huge jerk
+[^john]: source is john
