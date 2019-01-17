@@ -12,7 +12,11 @@ However, the power imbued in good sound design comes with a large cost, particul
 
 The Nintendo Entertainment System was released in 1983. Nintendo’s first gaming console, it is an 8-bit system with 5 completely analog audio channels with 4-bit quantization. Since the analog waveforms that the NES can produce can be sounded at any frequency, the console does not have a distinct sample rate. The Ricoh 2A03, an 8-bit microprocessor, is in charge of the NES’ audio processing. The NES APU is thoroughly documented on the NES DEV Wiki “APU” page[^nesdevwiki].
 
-Four of the five channels on the RP2A03 can produce exactly one kind of analog waveform. The first two channels on the NES produce pulse waves. Each channel can produce a pulse wave with one of four different duty cycles. Additionally, both pulse waves can be modulated with a 4-bit constant or saw-shaped decay volume envelope as well as with a built-in linear pitch sweep. Channel three can produce a 4-bit quantized triangle wave. This channel does not have volume envelope or pitch sweep functionality, and is therefore essentially limited to being on or off at a given pitch. The fourth channel is a noise generator with the same volume envelopes as the pulse channels. Noise can be used to emulate the sounds of percussion and impacts. The noise channel uses a 15-bit linear-feedback shift register to generate a pseudorandom sequence of 1-bit numbers at a given rate by starting with a value of 000000000000001, shifting each bit down a place every step, and placing the bitwise exclusive-or (that is, 1 if the two values are different, 0 if they are the same) of two bits in the most significant bit on each step:
+Four of the five channels on the RP2A03 can produce exactly one kind of analog waveform. The first two channels on the NES produce pulse waves. Each channel can produce a pulse wave with one of four different duty cycles. Additionally, both pulse waves can be modulated with a 4-bit constant or saw-shaped decay volume envelope as well as with a built-in linear pitch sweep. Channel three can produce a 4-bit quantized triangle wave. This channel does not have volume envelope or pitch sweep functionality, and is therefore essentially limited to being on or off at a given pitch. The fourth channel is a noise generator with the same volume envelopes as the pulse channels. Noise can be used to emulate the sounds of percussion and impacts. The noise channel uses a 15-bit linear-feedback shift register to generate a pseudorandom sequence of 1-bit numbers at a given rate by starting with a value of 000000000000001, shifting each bit down a place every step, and placing the bitwise exclusive-or (that is, 1 if the two values are different, 0 if they are the same) of two bits in the most significant bit on each step.
+
+> To better understand the LFSR, I wrote an emulation of it in C: [proto.ml/lfsr](/lfsr)
+
+This generator has two modes: In mode 0, the XOR of bits 0 and 1 is used, created a 32,767 step sequence that sounds like white noise; in mode 1, the XOR of bits 0 and 6 is used, creating a 31 or 93 step sequence with the distinct tone of a metallic “clank.” In a typical NES music composition, these four channels are used for the melody, harmony, bass, and percussion respectively.
 
 <audio
     controls
@@ -22,15 +26,41 @@ Four of the five channels on the RP2A03 can produce exactly one kind of analog w
 
 > *Fire Man's theme from* Mega Man *(1987) excellently demonstrates both modes of the noise generator. Listen to the alternating metal clank and snare drum in the percussion. [Listen on YouTube](https://youtu.be/CTIdRD5qrag)*
 
- This generator has two modes: In mode 0, the XOR of bits 0 and 1 is used, created a 32,767 step sequence that sounds like white noise; in mode 1, the XOR of bits 0 and 6 is used, creating a 31 or 93 step sequence with the distinct tone of a metallic “clank.” In a typical NES music composition, these four channels are used for the melody, harmony, bass, and percussion respectively.
-
 The fifth NES sound channel allows for playback of custom waveforms. Often referred to as the delta modulation channel, it uses 1-bit delta pulse code modulation to efficiently store 7-bit PCM waveform data for playback at a variable rate. However, as most NES games were stored in 200kB cartridges, with even the largest games only taking up only 1MB, space for even DPCM waves was often too much to ask. Thus, this channel is by far the least used in NES games. While this channel could be used to supplement the four prescribed-wave channels with additional simple waveforms, the most memorable DMC sounds pushed the console to its absolute limit. With enough free space, the DMC channel could even play recorded voice clips! Even if these DMC recordings are not even decent quality by today’s standards, they are truly remarkable for their time and place.
 
-However, even five channels and custom waveforms wasn’t enough for the incredibly ambitious Nintendo of 1983. While this capability was not included in US-released NESes, Japanese Famicoms are capable of sending and receiving data from expansion chips in game cartridges. In addition to providing additional processing power, tools, or memory management capabilities, these expansion chips could open up additional sound channels on the Famicom. Some notable expansion chips are the Sunsoft 5B, which added additional square and noise waves to the sound of Mr. Gimmick!, Famicom Disc System Audio, which offered the potential to employ wavetable synthesis, and the Konami VRC line of chips. Expansion chip composers often had to recompose game soundtracks for US release due to the lack of expanded sound channels. This difference can be heard in titles like Konami’s Castlevania III: Dracula’s Curse, for which the music was composed with the capabilities of the VRC6, with two extra pulse waves and a sawtooth wave, in mind.
+<audio
+    controls
+	src="The Adventures of Bayou Billy.mp3">
+	Your computer does not support HTML in-line audio.
+</audio>
 
-The player two controller on only the original Famicom (the Japanese name for the NES) with directly wired, non-removable controllers had a small-diaphragm condenser microphone instead of start and select buttons (Great Hierophant). This microphone is only capable of simple amplitude recognition, so a small assortment of games including Japanese versions of The Legend of Zelda and Raid on Bungeling Bay encourage the players to blow into the mic to destroy enemies, interact with NPCs, or trigger events. 
+> *An often-cited example of the DMC's capabilities is a voice clip in* The Adventures of Bayou Billy. *[Listen on YouTube](https://youtu.be/cpd87e2PJnE?t=34)*
 
-The Super Mario franchise piece I’ve chosen to represent the NES is “Overworld” from Super Mario Bros. 3 (1998), composed by Koji Kondo. While many would choose the main theme from the original Super Mario Bros., I believe “Overworld” is a better representative because it includes a demonstration of the capabilities of channel five with a frequently used “steel drum” sound sample.
+However, even five channels and custom waveforms wasn’t enough for the incredibly ambitious Nintendo of 1983. While this capability was not included in US-released NESes, Japanese Famicoms are capable of sending and receiving data from expansion chips in game cartridges. In addition to providing additional processing power, tools, or memory management capabilities, these expansion chips could open up additional sound channels on the Famicom. Some notable expansion chips are the Sunsoft 5B, which added additional square and noise waves to the sound of Mr. Gimmick!, Famicom Disc System (A Famicom add-on that allowed the loading of games from floppy discs) Audio, which offered the potential to employ wavetable synthesis, and the Konami VRC line of chips. Expansion chip composers often had to recompose game soundtracks for US release due to the lack of expanded sound channels. This difference can be heard in titles like Konami’s Castlevania III: Dracula’s Curse, for which the music was composed with the capabilities of the VRC6, with two extra pulse waves and a sawtooth wave, in mind.
+
+<audio
+	controls
+	src="Akumajou Densetsu.mp3">
+	Your computer does not support HTML in-line audio.
+</audio>
+
+<audio
+	controls
+	src="Castlevania III Dracula's Curse.mp3">
+	Your computer does not support HTML in-line audio.
+</audio>
+
+> *Stage 1 from* Akumajou Densetsu *(JP) and* Castlevania III: Dracula's Curse *(US). The music was recomposed for the US version without expanded sound. [Listen on YouTube](https://youtu.be/Rh-vkpjyMTw)*
+	
+The player two controller on only the original Famicom (the Japanese name for the NES) with directly wired, non-removable controllers had a small-diaphragm condenser microphone instead of start and select buttons[^greathierophant]. This microphone is only capable of simple amplitude recognition, so a small assortment of games including Japanese versions of The Legend of Zelda and Raid on Bungeling Bay encourage the players to blow into the mic to destroy enemies, interact with NPCs, or trigger events. 
+
+The Super Mario franchise piece I’ve chosen to represent the NES is “Overworld” from Super Mario Bros. 3 (1998), composed by Koji Kondo. While many would choose the main theme from the original Super Mario Bros., I believe “Overworld” is a better representative because it includes a demonstration of the capabilities of channel five with a frequently used “steel drum” sound sample:
+
+<audio
+	controls
+	src="Super Mario Bros 3.mp3">
+	Your computer does not support HTML in-line audio.
+</audio>
 
 ### The Game Boy
 
