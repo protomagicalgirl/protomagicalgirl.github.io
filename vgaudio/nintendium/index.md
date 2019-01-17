@@ -92,6 +92,8 @@ One reason the Game Boy is favored over the NES by chiptune music composers (bes
 
 I’ve chosen “Birabuto Kingdom” from Super Mario Land, composed by Hip Tanaka, to represent the Game Boy. Despite Super Mario Land being a Game Boy launch title, this song demonstrates almost every exciting feature of the GB APU, with the percussion loop moving in stereo and the DMC generating a triangle wave to fill in the bass part. Any discussion of Nintendo game audio would be incomplete without the work of Hip Tanaka, who stood toe-to-toe with the revered Koji Kondo in compositional skill, ingenuity, and legacy.
 
+> *For more on Hip Tanaka, I highly recommend listening to [“The Music of Hip Tanaka” by* The Frame Savers](https://soundcloud.com/theframesavers/tfs-pocket-43-the-music-of-hip-tanaka).
+
 <audio
 	controls
 	src="Super Mario Land.mp3">
@@ -104,15 +106,41 @@ I’ve chosen “Birabuto Kingdom” from Super Mario Land, composed by Hip Tana
 
 The next decade was truly an age of innovation, and Nintendo’s ‘90s console was no exception. In 1991, Nintendo released the Super Nintendo Entertainment System, a 16-bit console packed with one of the most powerful audio subsystems the gaming world had ever seen. More complex audio synthesis became possible in the 16-bit era as memory prices fell significantly. Sega’s 16 bit console, the Genesis, is revered for its FM synthesis sound engine (with six channels that can each produce four sine waves), but Hudson’s PC Engine chose to go the route of wavetable synthesis, leaving the later-released SNES to choose what route it would go.
 
-Nintendo’s Ken Kutaragi, a true visionary in console design, was in charge of creating the SNES audio system. What he created was not just a chip and architecture, but rather an incredibly complex audio subsystem called the Nintendo S-SMP (Fatnick 2-3). The S-SMP is a revolutionary wavetable sound system based around a Sony SPC700 CPU, with its own internal register, 64kB of RAM, and a 16-bit DSP chip (Datschge).
+Nintendo’s Ken Kutaragi, a true visionary in console design, was in charge of creating the SNES audio system. What he created was not just a chip and architecture, but rather an incredibly complex audio subsystem called the Nintendo S-SMP[^fatnick]. The S-SMP is a revolutionary wavetable sound system based around a Sony SPC700 CPU, with its own internal register, 64kB of RAM, and a 16-bit DSP chip[^datschge].
 
-Thanks to Kutaragi’s S-SMP, the SNES is capable of playing 8 wavetable synthesis voices at the same time, with 8-bit panning per channel allowing extremely precise stereo sound design, all with 8-bit depth at 32kHz. This system operated with 32-sample Adaptive Delta PCM wavetable samples stored in a custom 9-bit format (16 9-bit values composed of a 1-bit header and two 4-bit samples), designed by Kutaragi to increase compression and allow lower-amplitude samples to be encoded in higher quality by adapting the quantization factor every 16 samples (“SPC700 Reference,” “SNES Development Manual” 157). The main benefit of the S-SMP over the FM synthesis sound chip of the Genesis is the variety of different sounds that wavetable synthesis can employ. Additionally, the S-SMP was easier to program for, as it allowed developers to write their own song playback engine microcode as they see fit.
+Thanks to Kutaragi’s S-SMP, the SNES is capable of playing 8 wavetable synthesis voices at the same time, with 8-bit panning per channel allowing extremely precise stereo sound design, all with 8-bit depth at 32kHz. This system operated with 32-sample Adaptive Delta PCM wavetable samples stored in a custom 9-bit format (16 9-bit values composed of a 1-bit header and two 4-bit samples), designed by Kutaragi to increase compression and allow lower-amplitude samples to be encoded in higher quality by adapting the quantization factor every 16 samples[^spc700ref] [^snesdevmanual]. The main benefit of the S-SMP over the FM synthesis sound chip of the Genesis is the variety of different sounds that wavetable synthesis can employ. Additionally, the S-SMP was easier to program for, as it allowed developers to write their own song playback engine microcode as they see fit.
 
-The S-SMP’s wavetable synthesis is supplemented by a small library of effects (“SNES Development Manual” 168). The most iconic SNES effect is the SNES’ echo unit, which is capable of applying an echo to any of the SNES’ audio channels with adjustable delay, feedback, pan, and EQ (177-8). The SNES also had a single noise generator, which I can only assume is identical to the mode 0 LFSR in the NES and Game Boy. There is only one noise generator, but it can be applied to any number of channels. The SNES also offered frequency modulation-based pitch modulation of channels. The pitch modulation unit could frequency modulate one channel based off of the changes in frequency of another channel (note that this means that for every channel that is modulated, another channel is unavailable) (174). Finally, every channel was equipped with a unique volume envelope, capable of applying linear or curved growth or decay or a traditional ADSR filter.
+<audio
+	controls
+	src="Megaman X3.mp3">
+	Your computer does not support HTML in-line audio.
+</audio>
 
-Like the Game Boy, the SNES is capable of taking additional audio from the cartridge, but this time in stereo (CaitSith2). These audio pins are used for most of the SNES’ add-ons, including the Super Game Boy, an attachment that allows playing Game Boy games through the SNES on a television, and the BS Satellaview, an internet-connected extension that allowed games and special content to be distributed periodically a la television programming. Cartridge audio in likely would have been used for the never-released SNES CD, one of Ken Kutaragi’s less successful projects.
+> *To understand the scope of the S-SMP’s variety, compare Mega Man X3’s “Crush Crawfish” to the samples from Super Mario World.*
+
+The S-SMP’s wavetable synthesis is supplemented by a small library of effects. The most iconic SNES effect is the SNES’ echo unit, which is capable of applying an echo to any of the SNES’ audio channels with adjustable delay, feedback, pan, and EQ[^snesdevmanual]:
+
+<audio
+	controls
+	src="Super Mario World Underground.mp3">
+	Your computer does not support HTML in-line audio.
+</audio>
+
+> *Listen to the iconic SNES echo in Super Mario World’s underground theme. [Listen on YouTube](https://youtu.be/M7G--2s3bdc)*
+
+The SNES also had a single noise generator, which I can only assume is identical to the mode 0 LFSR in the NES and Game Boy. There is only one noise generator, but it can be applied to any number of channels. The SNES also offered frequency modulation-based pitch modulation of channels. The pitch modulation unit could frequency modulate one channel based off of the changes in frequency of another channel (note that this means that for every channel that is modulated, another channel is unavailable)[^snesdevmanual]. Finally, every channel was equipped with a unique volume envelope, capable of applying linear or curved growth or decay or a traditional ADSR filter.
+
+Like the Game Boy, the SNES is capable of taking additional audio from the cartridge, but this time in stereo[^caitsith2]. These audio pins are used for most of the SNES’ add-ons, including the Super Game Boy, an attachment that allows playing Game Boy games through the SNES on a television, and the BS Satellaview, an internet-connected extension that allowed games and special content to be distributed periodically a la television programming. Cartridge audio in likely would have been used for the never-released SNES CD, one of Ken Kutaragi’s less successful projects.
 
 My song choice to represent the SNES in the Super Mario franchise is “Overworld” from Super Mario World, composed by Koji Kondo. This song uses a variety of unique sounds, including a steel drum similar to the one used in Super Mario Bros. 3, and demonstrates Koji Kondo’s vision of the Mario sound.
+
+<audio
+	controls
+	src="Super Mario World Overworld.mp3">
+	Your computer does not support HTML in-line audio.
+</audio>
+
+> *[Listen on YouTube](https://youtu.be/Fn0khIn2wfc)*
 
 ### The Virtual Boy
 
