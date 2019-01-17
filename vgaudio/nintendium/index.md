@@ -92,7 +92,7 @@ One reason the Game Boy is favored over the NES by chiptune music composers (bes
 
 I’ve chosen “Birabuto Kingdom” from Super Mario Land, composed by Hip Tanaka, to represent the Game Boy. Despite Super Mario Land being a Game Boy launch title, this song demonstrates almost every exciting feature of the GB APU, with the percussion loop moving in stereo and the DMC generating a triangle wave to fill in the bass part. Any discussion of Nintendo game audio would be incomplete without the work of Hip Tanaka, who stood toe-to-toe with the revered Koji Kondo in compositional skill, ingenuity, and legacy.
 
-> *For more on Hip Tanaka, I highly recommend listening to [“The Music of Hip Tanaka” by The Frame Savers](https://soundcloud.com/theframesavers/tfs-pocket-43-the-music-of-hip-tanaka).
+> For more on Hip Tanaka, I highly recommend listening to [“The Music of Hip Tanaka” by The Frame Savers](https://soundcloud.com/theframesavers/tfs-pocket-43-the-music-of-hip-tanaka).
 
 <audio
 	controls
