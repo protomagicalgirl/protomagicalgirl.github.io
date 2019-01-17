@@ -20,7 +20,7 @@ Four of the five channels on the RP2A03 can produce exactly one kind of analog w
 	Your computer does not support HTML in-line audio.
 </audio>
 
-> *Fire Man's theme from *Mega Man* (1987) excellently demonstrates both modes of the noise generator. Listen to the alternating metal clank and snare drum in the percussion. [Listen on YouTube](https://youtu.be/CTIdRD5qrag)*
+> *Fire Man's theme from* Mega Man *(1987) excellently demonstrates both modes of the noise generator. Listen to the alternating metal clank and snare drum in the percussion. [Listen on YouTube](https://youtu.be/CTIdRD5qrag)*
 
  This generator has two modes: In mode 0, the XOR of bits 0 and 1 is used, created a 32,767 step sequence that sounds like white noise; in mode 1, the XOR of bits 0 and 6 is used, creating a 31 or 93 step sequence with the distinct tone of a metallic “clank.” In a typical NES music composition, these four channels are used for the melody, harmony, bass, and percussion respectively.
 
