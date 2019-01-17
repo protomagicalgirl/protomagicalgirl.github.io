@@ -9,3 +9,9 @@ testing testing testing
 </audio>
 
 this was a test file
+
+hey, here's a fun fact[^1]!
+
+here's some more random information.
+
+[^1]: sorry we didn't source our info like some kinda huge jerk
