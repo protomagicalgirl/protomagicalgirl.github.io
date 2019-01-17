@@ -4,7 +4,7 @@
 
 ### Introduction
 
-Though too often underappreciated, sound design is one of the most crucial features of making a successful game. Good music and sound effects can accentuate the best features and desired aesthetic of a game’s visuals and mechanics. Whether the joyous romps of Super Mario Bros., the mysterious dungeon hymns of The Legend of Zelda, or the sparse, environmental melodies of Metroid, Nintendo’s iconic games would not be the same without their music.
+Though too often underappreciated, sound design is one of the most crucial features of making a successful game. Good music and sound effects can accentuate the best features and desired aesthetic of a game’s visuals and mechanics. Whether the joyous romps of *Super Mario Bros.*, the mysterious dungeon hymns of *The Legend of Zelda*, or the sparse, environmental melodies of *Metroid*, Nintendo’s iconic games would not be the same without their music.
 
 However, the power imbued in good sound design comes with a large cost, particularly for retro consoles. The extremely simple, robust sound chips featured on old consoles required extremely specific expertise to make sound, let alone enjoyable music, due to their highly limited, low-resolution simple wave or wavetable-based sound generation. Video game composers before the era of CD-quality audio In this paper I will discuss the audio capabilities, software, and hardware of every Nintendo console, spanning from the Nintendo Entertainment System to the Nintendo Wii. For each console, I will discuss specific details of how the console produces audio, relevant general console information including release date and typical storage memory, important musical, audiological, or cultural features, and comparative details of consoles across brands or generations. To facilitate direct comparison between consoles, I will present an audio example from an entry in the Super Mario franchise on each console, and I will supplement information with additional examples from other games and series where necessary.
 
@@ -52,7 +52,7 @@ However, even five channels and custom waveforms wasn’t enough for the incredi
 
 > *Stage 1 from* Akumajou Densetsu *(JP) and* Castlevania III: Dracula's Curse *(US). The music was recomposed for the US version without expanded sound. [Listen on YouTube](https://youtu.be/Rh-vkpjyMTw)*
 	
-The player two controller on only the original Famicom (the Japanese name for the NES) with directly wired, non-removable controllers had a small-diaphragm condenser microphone instead of start and select buttons[^greathierophant]. This microphone is only capable of simple amplitude recognition, so a small assortment of games including Japanese versions of The Legend of Zelda and Raid on Bungeling Bay encourage the players to blow into the mic to destroy enemies, interact with NPCs, or trigger events. 
+The player two controller on only the original Famicom (the Japanese name for the NES) with directly wired, non-removable controllers had a small-diaphragm condenser microphone instead of start and select buttons[^greathierophant]. This microphone is only capable of simple amplitude recognition, so a small assortment of games including Japanese versions of *The Legend of Zelda* and *Raid on Bungeling Bay* encourage the players to blow into the mic to destroy enemies, interact with NPCs, or trigger events. 
 
 The Super Mario franchise piece I’ve chosen to represent the NES is “Overworld” from Super Mario Bros. 3 (1998), composed by Koji Kondo. While many would choose the main theme from the original Super Mario Bros., I believe “Overworld” is a better representative because it includes a demonstration of the capabilities of channel five with a frequently used “steel drum” sound sample:
 
@@ -62,17 +62,43 @@ The Super Mario franchise piece I’ve chosen to represent the NES is “Overwor
 	Your computer does not support HTML in-line audio.
 </audio>
 
+> *[Listen on YouTube](https://youtu.be/Q_saM7I20pY)*
+
 ### The Game Boy
 
-Nintendo released their next console in 1989, six years after the original release of the NES. This console was the Game Boy, an 8-bit handheld console. In a lot of ways, the Game Boy is a miniature NES, packing similar audio and visual tools into a 4-color screen with half the resolution (166x140) of the NES (256x240). The Game Boy’s APU followed in the footsteps of its predecessor, giving developers four analog channels with a bit depth of four. All of the Game Boy derivative models, including the Game Boy Color, have the same audio capabilities. My research on the Game Boy was primarily informed by the GB Dev Wiki’s page on Gameboy Sound Hardware. Audio on the Game Boy was programmable with a tool called MusyX (pronounced musics) developed by a third-party studio called Factor 5 (“MusyX - audio tools…”). Factor 5 would go on to work on audio tools and games for Nintendo’s later consoles as well.
+Nintendo released their next console in 1989, six years after the original release of the NES. This console was the Game Boy, an 8-bit handheld console. In a lot of ways, the Game Boy is a miniature NES, packing similar audio and visual tools into a 4-color screen with half the resolution (166x140) of the NES (256x240). The Game Boy’s APU followed in the footsteps of its predecessor, giving developers four analog channels with a bit depth of four. All of the Game Boy derivative models, including the Game Boy Color, have the same audio capabilities. My research on the Game Boy was primarily informed by the GB Dev Wiki’s page on Gameboy Sound Hardware[^gbdev]. Audio on the Game Boy was programmable with a tool called MusyX (pronounced *musics*) developed by a third-party studio called Factor 5[^factor5]. Factor 5 would go on to work on audio tools and games for Nintendo’s later consoles as well.
 
-The first two sound channels on the Game Boy are pulse waves. Each channel can produce four different duty cycles and comes equipped with an individual volume envelope. The volume envelopes on the GB offer adjustable linear volume increase or decrease. The first pulse channel has a frequency sweep unit similar to that of the NES. The GB does not have a triangle wave channel. Channel three is a noise generator that employs a very similar noise generator to that of the NES. While the Game Boy also has a noise mode switch, mode 1 in the GB continues to exclusive-or bits 0 and 1 and instead places the result in bit six as well as bit 14, creating a 127-step noise sequence. It is unknown whether this difference was intentional or not. The Game Boy’s fourth channel is a delta modulation channel that is a fair bit more advanced than that of the NES. The GB DMC comes equipped with a 32-byte wave table that stores a waveform as  64-sample, 4-bit PCM. One weakness of this system is that hot-swapping the values in the wave table will cause artifacts in the sound Game Boy carts could store up to 4MB, four times the capacity of the largest NES carts, making the use of the DMC significantly more common. Since the GB lacked a triangle wave channel, many developers (such as Hip Tanaka, composer for Super Mario Land) chose to use it to add in another basic waveform, but one iconic example of DMC ingenuity is the “pika!” voice sample played on the title screen of Pokémon Yellow, voice acted by the same actor who voices Pikachu in the Pokémon anime, Ikue Ootani.
+The first two sound channels on the Game Boy are pulse waves. Each channel can produce four different duty cycles and comes equipped with an individual volume envelope. The volume envelopes on the GB offer adjustable linear volume increase or decrease. The first pulse channel has a frequency sweep unit similar to that of the NES. The GB does not have a triangle wave channel. Channel three is a noise generator that employs a very similar noise generator to that of the NES. While the Game Boy also has a noise mode switch, mode 1 in the GB continues to exclusive-or bits 0 and 1 and instead places the result in bit six as well as bit 14, creating a 127-step noise sequence. It is unknown whether this difference was intentional or not. 
 
-While the Game Boy did not have expansion chips, Nintendo left in the capability for expansion audio with a fifth audio channel that takes an analog audio signal from the game cartridge (Chipmusic). There are no known examples of an official Game Boy game making use of this feature. However, with the Game Boy’s prominent place in the chiptune music scene, this input channel has received the attention it deserves in the form of Nanoloop Mono, an analog synthesizer in the form of a Game Boy cartridge (Oliver Wittchow). Another notable Game Boy homebrew creation is Little Sound Dj, an extremely popular chiptune composition program in the form of a Game Boy ROM.
+<audio
+	controls
+	src="Links Awakening.mp3">
+	Your computer does not support HTML in-line audio.
+</audio>
+
+> *An example of noise mode 1 on the Game Boy is the "bonk" sound from* The Legend of Zelda: Link's Awakening.
+
+The Game Boy’s fourth channel is a delta modulation channel that is a fair bit more advanced than that of the NES. The GB DMC comes equipped with a 32-byte wave table that stores a waveform as  64-sample, 4-bit PCM. One weakness of this system is that hot-swapping the values in the wave table will cause artifacts in the sound Game Boy carts could store up to 4MB, four times the capacity of the largest NES carts, making the use of the DMC significantly more common. Since the GB lacked a triangle wave channel, many developers (such as Hip Tanaka, composer for Super Mario Land) chose to use it to add in another basic waveform, but one iconic example of DMC ingenuity is the “pika!” voice sample played on the title screen of Pokémon Yellow, voice acted by the same actor who voices Pikachu in the Pokémon anime, Ikue Ootani:
+
+<audio
+	controls
+	src="Pokemon Yellow.mp3">
+	Your computer does not support HTML in-line audio.
+</audio>
+
+While the Game Boy did not have expansion chips, Nintendo left in the capability for expansion audio with a fifth audio channel that takes an analog audio signal from the game cartridge[^chipmusic]. There are no known examples of an official Game Boy game making use of this feature. However, with the Game Boy’s prominent place in the chiptune music scene, this input channel has received the attention it deserves in the form of Nanoloop Mono, an analog synthesizer in the form of a Game Boy cartridge[^oliverwittchow]. Another notable Game Boy homebrew creation is Little Sound Dj, an extremely popular chiptune composition program in the form of a Game Boy ROM.
 
 One reason the Game Boy is favored over the NES by chiptune music composers (besides the obvious benefit of portability) is that the Game Boy is capable of stereo audio! Each channel DAC was capable of sending its audio to the left channel, the right channel, or both. While the Game Boy’s built-in speaker is monaural, the 3.5mm headphone jack outputs stereo audio.
 
 I’ve chosen “Birabuto Kingdom” from Super Mario Land, composed by Hip Tanaka, to represent the Game Boy. Despite Super Mario Land being a Game Boy launch title, this song demonstrates almost every exciting feature of the GB APU, with the percussion loop moving in stereo and the DMC generating a triangle wave to fill in the bass part. Any discussion of Nintendo game audio would be incomplete without the work of Hip Tanaka, who stood toe-to-toe with the revered Koji Kondo in compositional skill, ingenuity, and legacy.
+
+<audio
+	controls
+	src="Super Mario Land.mp3">
+	Your computer does not support HTML in-line audio.
+</audio>
+
+> *[Listen on YouTube](https://youtu.be/Gb33Qnbw520)*
 
 ### The Super Nintendo Entertainment System
 
