@@ -1,18 +1,28 @@
-### Nintendium Philharmonic: The History of the Sound of Nintendo Gaming Consoles From the Famicom to the Wii
+## Nintendium Philharmonic: The History of the Sound of Nintendo Gaming Consoles From the Famicom to the Wii
 
 *(Note: While the content of this paper has been left more or less unmodified, we've made some significant changes for readability in a website format. Trust us, you're better off reading it like this.)*
 
-#### Introduction
+### Introduction
 
 Though too often underappreciated, sound design is one of the most crucial features of making a successful game. Good music and sound effects can accentuate the best features and desired aesthetic of a game’s visuals and mechanics. Whether the joyous romps of Super Mario Bros., the mysterious dungeon hymns of The Legend of Zelda, or the sparse, environmental melodies of Metroid, Nintendo’s iconic games would not be the same without their music.
 
 However, the power imbued in good sound design comes with a large cost, particularly for retro consoles. The extremely simple, robust sound chips featured on old consoles required extremely specific expertise to make sound, let alone enjoyable music, due to their highly limited, low-resolution simple wave or wavetable-based sound generation. Video game composers before the era of CD-quality audio In this paper I will discuss the audio capabilities, software, and hardware of every Nintendo console, spanning from the Nintendo Entertainment System to the Nintendo Wii. For each console, I will discuss specific details of how the console produces audio, relevant general console information including release date and typical storage memory, important musical, audiological, or cultural features, and comparative details of consoles across brands or generations. To facilitate direct comparison between consoles, I will present an audio example from an entry in the Super Mario franchise on each console, and I will supplement information with additional examples from other games and series where necessary.
 
-#### The Nintendo Entertainment System
+### The Nintendo Entertainment System
 
-The Nintendo Entertainment System was released in 1983. Nintendo’s first gaming console, it is an 8-bit system with 5 completely analog audio channels with 4-bit quantization. Since the analog waveforms that the NES can produce can be sounded at any frequency, the console does not have a distinct sample rate. The Ricoh 2A03, an 8-bit microprocessor, is in charge of the NES’ audio processing. The NES APU is thoroughly documented on the NES DEV Wiki “APU” page.
+The Nintendo Entertainment System was released in 1983. Nintendo’s first gaming console, it is an 8-bit system with 5 completely analog audio channels with 4-bit quantization. Since the analog waveforms that the NES can produce can be sounded at any frequency, the console does not have a distinct sample rate. The Ricoh 2A03, an 8-bit microprocessor, is in charge of the NES’ audio processing. The NES APU is thoroughly documented on the NES DEV Wiki “APU” page[^nesdevwiki].
 
-Four of the five channels on the RP2A03 can produce exactly one kind of analog waveform. The first two channels on the NES produce pulse waves. Each channel can produce a pulse wave with one of four different duty cycles. Additionally, both pulse waves can be modulated with a 4-bit constant or saw-shaped decay volume envelope as well as with a built-in linear pitch sweep. Channel three can produce a 4-bit quantized triangle wave. This channel does not have volume envelope or pitch sweep functionality, and is therefore essentially limited to being on or off at a given pitch. The fourth channel is a noise generator with the same volume envelopes as the pulse channels. Noise can be used to emulate the sounds of percussion and impacts. The noise channel uses a 15-bit linear-feedback shift register to generate a pseudorandom sequence of 1-bit numbers at a given rate by starting with a value of 000000000000001, shifting each bit down a place every step, and placing the bitwise exclusive-or (that is, 1 if the two values are different, 0 if they are the same) of two bits in the most significant bit on each step. This generator has two modes: In mode 0, the XOR of bits 0 and 1 is used, created a 32,767 step sequence that sounds like white noise; in mode 1, the XOR of bits 0 and 6 is used, creating a 31 or 93 step sequence with the distinct tone of a metallic “clank.” In a typical NES music composition, these four channels are used for the melody, harmony, bass, and percussion respectively.
+Four of the five channels on the RP2A03 can produce exactly one kind of analog waveform. The first two channels on the NES produce pulse waves. Each channel can produce a pulse wave with one of four different duty cycles. Additionally, both pulse waves can be modulated with a 4-bit constant or saw-shaped decay volume envelope as well as with a built-in linear pitch sweep. Channel three can produce a 4-bit quantized triangle wave. This channel does not have volume envelope or pitch sweep functionality, and is therefore essentially limited to being on or off at a given pitch. The fourth channel is a noise generator with the same volume envelopes as the pulse channels. Noise can be used to emulate the sounds of percussion and impacts. The noise channel uses a 15-bit linear-feedback shift register to generate a pseudorandom sequence of 1-bit numbers at a given rate by starting with a value of 000000000000001, shifting each bit down a place every step, and placing the bitwise exclusive-or (that is, 1 if the two values are different, 0 if they are the same) of two bits in the most significant bit on each step:
+
+<audio
+    controls
+	src="Megaman.mp3">
+	Your computer does not support HTML in-line audio.
+</audio>
+
+> *Fire Man's theme from *Mega Man* (1987) excellently demonstrates both modes of the noise generator. Listen to the alternating metal clank and snare drum in the percussion. [Listen on YouTube](https://youtu.be/CTIdRD5qrag)*
+
+ This generator has two modes: In mode 0, the XOR of bits 0 and 1 is used, created a 32,767 step sequence that sounds like white noise; in mode 1, the XOR of bits 0 and 6 is used, creating a 31 or 93 step sequence with the distinct tone of a metallic “clank.” In a typical NES music composition, these four channels are used for the melody, harmony, bass, and percussion respectively.
 
 The fifth NES sound channel allows for playback of custom waveforms. Often referred to as the delta modulation channel, it uses 1-bit delta pulse code modulation to efficiently store 7-bit PCM waveform data for playback at a variable rate. However, as most NES games were stored in 200kB cartridges, with even the largest games only taking up only 1MB, space for even DPCM waves was often too much to ask. Thus, this channel is by far the least used in NES games. While this channel could be used to supplement the four prescribed-wave channels with additional simple waveforms, the most memorable DMC sounds pushed the console to its absolute limit. With enough free space, the DMC channel could even play recorded voice clips! Even if these DMC recordings are not even decent quality by today’s standards, they are truly remarkable for their time and place.
 
@@ -22,7 +32,7 @@ The player two controller on only the original Famicom (the Japanese name for th
 
 The Super Mario franchise piece I’ve chosen to represent the NES is “Overworld” from Super Mario Bros. 3 (1998), composed by Koji Kondo. While many would choose the main theme from the original Super Mario Bros., I believe “Overworld” is a better representative because it includes a demonstration of the capabilities of channel five with a frequently used “steel drum” sound sample.
 
-#### The Game Boy
+### The Game Boy
 
 Nintendo released their next console in 1989, six years after the original release of the NES. This console was the Game Boy, an 8-bit handheld console. In a lot of ways, the Game Boy is a miniature NES, packing similar audio and visual tools into a 4-color screen with half the resolution (166x140) of the NES (256x240). The Game Boy’s APU followed in the footsteps of its predecessor, giving developers four analog channels with a bit depth of four. All of the Game Boy derivative models, including the Game Boy Color, have the same audio capabilities. My research on the Game Boy was primarily informed by the GB Dev Wiki’s page on Gameboy Sound Hardware. Audio on the Game Boy was programmable with a tool called MusyX (pronounced musics) developed by a third-party studio called Factor 5 (“MusyX - audio tools…”). Factor 5 would go on to work on audio tools and games for Nintendo’s later consoles as well.
 
@@ -34,7 +44,7 @@ One reason the Game Boy is favored over the NES by chiptune music composers (bes
 
 I’ve chosen “Birabuto Kingdom” from Super Mario Land, composed by Hip Tanaka, to represent the Game Boy. Despite Super Mario Land being a Game Boy launch title, this song demonstrates almost every exciting feature of the GB APU, with the percussion loop moving in stereo and the DMC generating a triangle wave to fill in the bass part. Any discussion of Nintendo game audio would be incomplete without the work of Hip Tanaka, who stood toe-to-toe with the revered Koji Kondo in compositional skill, ingenuity, and legacy.
 
-#### The Super Nintendo Entertainment System
+### The Super Nintendo Entertainment System
 
 The next decade was truly an age of innovation, and Nintendo’s ‘90s console was no exception. In 1991, Nintendo released the Super Nintendo Entertainment System, a 16-bit console packed with one of the most powerful audio subsystems the gaming world had ever seen. More complex audio synthesis became possible in the 16-bit era as memory prices fell significantly. Sega’s 16 bit console, the Genesis, is revered for its FM synthesis sound engine (with six channels that can each produce four sine waves), but Hudson’s PC Engine chose to go the route of wavetable synthesis, leaving the later-released SNES to choose what route it would go.
 
@@ -48,7 +58,7 @@ Like the Game Boy, the SNES is capable of taking additional audio from the cartr
 
 My song choice to represent the SNES in the Super Mario franchise is “Overworld” from Super Mario World, composed by Koji Kondo. This song uses a variety of unique sounds, including a steel drum similar to the one used in Super Mario Bros. 3, and demonstrates Koji Kondo’s vision of the Mario sound.
 
-#### The Virtual Boy
+### The Virtual Boy
 
 Nintendo’s next console was truly a child of the spirit of ‘90s innovation. The Nintendo Virtual Boy, released in 1995, is a 32-bit home console designed to play 3D VR games with seperate screens built into the console for each eye instead of a TV output. For audio, it was equipped with stereo speakers and a stereo headphone jack. While this console was absolutely revolutionary, it completely failed due to continuously lowered project budget, repeated cuts of promised features, an extremely small library of games (22 to be exact, with even less released in the US), and 3D technology that wasn’t quite advanced enough to impress consumers. Thanks to the Virtual Boy’s status as a sort of cult favorite, it was by far the most well-documented console within the scope of my research, with sites like Planet Virtual Boy having thorough memory maps and archives of official Nintendo documents in fair supply.
 
@@ -58,7 +68,7 @@ The Virtual Boy had pins for stereo audio input and output from the cartridge (P
 
 The only Mario games released on the Virtual Boy were spinoffs including Mario’s Tennis (not to be confused with Mario Tennis for the Game Boy Color) and Mario Clash (a unique, 3D take on classic Mario Bros. gameplay), so I’ve chosen a sample from Virtual Boy Wario Land, composed by Kazumi Totaka, to represent this console. Stage 2’s theme makes ample use of the envelopes and pitch modulation features of the Virtual Boy.
 
-#### The Nintendo 64
+### The Nintendo 64
 
 Nintendo’s next full-feature console was the Nintendo 64, a 1996 64-bit home system. While the N64 offered an incredible gaming experience with its early 3D titles, its audio systems are somewhat lacking. There is no dedicated audio processing system on the N64, leaving many to regard it as a step down from the Super Nintendo. Nintendo insists that the software-based audio on the N64 allows greater flexibility, which is not untrue, but the lack of dedicated audio processing hardware means audio dips into the console’s processing time, restricting what developers were able to create (“Nintendo 64 Audio Development Guide” 7). While the N64 boasted the ability to play up to 100 sound channels at once, the processing time cost of audio on the N64 is rather severe, with even Nintendo admitting that “the approximate time required per voice with a playback rate of 44.1 KHz is estimated to be 1% of RSP time,” thereby making channel counts above 15 often unfeasible (Next Generation, “Nintendo 64 Audio Development Guide” 66). The Nintendo 64 is programmable in C, a much-needed jump from the ASM used by previous consoles. The N64’s DAC is designed with 33kHz audio in mind, but is capable of playing other rates of audio as well (66). The N64 offers 16-bit stereo and bit depth.
 
@@ -70,7 +80,7 @@ The N64’s audio programming library comes with a number of delay line-based ef
 
 There is no game more iconic to the Nintendo 64 than Super Mario 64, and no song more iconic to Super Mario 64 than “Bob-Omb Battlefield,” composed by Koji Kondo.	This song unmistakably has the “sound” of MIDI, and clearly demonstrates the increase in sound quality compared to the Super Nintendo, but comes across as dated and tinny where the Super Nintendo had an iconic and unique sound that represents a clear understanding and willingness to work with the system’s capabilities.
 
-#### The Game Boy Advance
+### The Game Boy Advance
 
 The next Nintendo handheld on the market was the Game Boy Advance. Unlike the Game Boy Color systems, the GBA presented an entirely new and revamped experience rather than just further expanding the Game Boy’s capabilities. Released in 2001, the GBA is a portable 32-bit console with capabilities generally similar to the Super Nintendo. Games on the GBA could be up to 32MB, but most games were 8MB. The console had a mono speaker and stereo headphone jack.
 
@@ -80,7 +90,7 @@ The GBA APU has six sound channels. The first four are a near-exact replica of t
 
 Due to the combination of 8-bit digital samples with analog waveforms and the tone that pulse width modulation output gives the console, the Game Boy Advance is remembered for having an extremely unique sound with a very distinct amount of tinniness and buzz. Few songs demonstrate this better than my pick for Super Mario representative of the Game Boy Advance, “Come On!” from Mario and Luigi: Superstar Saga, composed by Yoko Shimomura.
 
-#### The GameCube
+### The GameCube
 
 Later in the same year, Nintendo released its next home console, the GameCube. The GameCube’s most notable feature is that it left cartridges behind in favor of proprietary 1.5GB MiniDVD discs. The GameCube can output between 32kHz and 48kHz 16-bit stereo sound from up to 100 channels or 64 3D audio channels (Bourdon). Additionally, it sports Dolby Pro Logic II, software that can turn stereo audio into 5.1 surround (Lal Shimpi).
 
@@ -94,7 +104,7 @@ While 1.5GB of space was a major upgrade for audio developers, it still wasn’t
 
 The GameCube’s library is full of a variety of Super Mario titles, but few are more memorable than Super Mario Sunshine. Sunshine evolved the 3D Mario format created in Super Mario 64 with a gorgeous, bright, and unique world along with special gameplay mechanics. Koji Kondo’s compositions for Sunshine reflect the game’s fun, tropical attitude. “Staff Roll” is a cross between a victory romp, samba, and futbol fan anthem, all wrapped up in the final repetition of the game’s main musical motifs. Additionally, this track employs an extremely wide variety of sampled instruments, showcasing the capabilities of the GameCube’s audio system and storage capacity quite nicely.
 
-#### The Nintendo DS
+### The Nintendo DS
 
 The Nintendo DS, or Double-Screen, released in 2004. It was a portable console with not one, but two, screens, one of which was a touch screen. The DS uses game cards, similar to common SD cards, that could store anywhere from eight to 512 MB of data. The console has stereo speakers positioned to either side of the top screen and a stereo headphone jack. Sound in the DS is generated at a peak sample rate of 1.04MHz, bit depth of 24, but resampled for output to 32.768kHz, 10 bits using pulse width modulation (Korth).
 
@@ -104,7 +114,7 @@ In addition to these audio outputs, the Nintendo DS has a built-in microphone. O
 
 2D Mario took a break during the Game Boy Advance era, but returned strong in New Super Mario Bros. (DS), a title that combined classic Super Mario platforming gameplay with modern design sensibility. The overworld theme from NSMB, composed by Hajime Wakai, is my choice to represent the DS. “Overworld” is a wonderful earworm and clear demonstration of just how much the DS improved audio compared to the GBA.
 
-#### The Nintendo Wii
+### The Nintendo Wii
 
 The final console in the scope of this paper is Nintendo’s Wii. Released in 2006, the Wii revolutionized gaming and handily outside Sony and Microsoft’s consoles of the era. Despite being little more than a souped-up GameCube under the hood, it offered unique gameplay with motion controls and universally accessible games like Wii Sports that made the console a hit. The Wii used DVD-ROM style discs capable of storing either 4.7 or 8.5GB of data, far outclassing the previous generations’ storage capabilities. Finally, 23 years after the release of the Nintendo Entertainment System, real, recorded, full songs were practical!
 
@@ -114,7 +124,7 @@ One unique audio feature of the Wii is that the controller, commonly referred to
 
 To represent Super Mario on the Wii, I believe that there is truly only one choice. Super Mario Galaxy’s “Gusty Garden Galaxy,” composed by Koji Kondo, is revered as one of the greatest pieces of video game music ever written. Super Mario Galaxy’s soundtrack features a recorded symphony orchestra, bringing an unprecedented level of depth and complexity to Super Mario series music.
 
-#### Conclusions
+### Conclusions
 
 The content of this paper ceases following the Wii due to the complete lack of substantial information regarding Nintendo’s more recent releases, the 3DS, Wii U, and Switch. Finding any information at all regarding the Wii was a significant challenge. With the passing of each console generation information became more scarce throughout the research process for this paper, and nearly every single piece of substantial information I was able to gather for this paper was available only due to the hard work of emulator developers, homebrew game makers, romhackers, hardware modders, and retro console enthusiasts. Even the official Nintendo documents I used were only accessible thanks to gaming historians’ archival work. Research on gaming consoles would hardly be possible without the work of individual enthusiasts and does not exist without complaint from the companies that make these consoles.
 
