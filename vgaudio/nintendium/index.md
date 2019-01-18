@@ -24,7 +24,7 @@ This generator has two modes: In mode 0, the XOR of bits 0 and 1 is used, create
 	Your computer does not support HTML in-line audio.
 </audio>
 
-> *Fire Man's theme from* Mega Man *(1987) excellently demonstrates both modes of the noise generator. Listen to the alternating metal clank and snare drum in the percussion. [Listen on YouTube](https://youtu.be/CTIdRD5qrag)*
+> *Fire Man's theme from Mega Man (1987) excellently demonstrates both modes of the noise generator. Listen to the alternating metal clank and snare drum in the percussion. [Listen on YouTube](https://youtu.be/CTIdRD5qrag)*
 
 The fifth NES sound channel allows for playback of custom waveforms. Often referred to as the delta modulation channel, it uses 1-bit delta pulse code modulation to efficiently store 7-bit PCM waveform data for playback at a variable rate. However, as most NES games were stored in 200kB cartridges, with even the largest games only taking up only 1MB, space for even DPCM waves was often too much to ask. Thus, this channel is by far the least used in NES games. While this channel could be used to supplement the four prescribed-wave channels with additional simple waveforms, the most memorable DMC sounds pushed the console to its absolute limit. With enough free space, the DMC channel could even play recorded voice clips! Even if these DMC recordings are not even decent quality by today’s standards, they are truly remarkable for their time and place.
 
@@ -34,7 +34,7 @@ The fifth NES sound channel allows for playback of custom waveforms. Often refer
 	Your computer does not support HTML in-line audio.
 </audio>
 
-> *An often-cited example of the DMC's capabilities is a voice clip in* The Adventures of Bayou Billy. *[Listen on YouTube](https://youtu.be/cpd87e2PJnE?t=34)*
+> *An often-cited example of the DMC's capabilities is a voice clip in The Adventures of Bayou Billy. [Listen on YouTube](https://youtu.be/cpd87e2PJnE?t=34)*
 
 However, even five channels and custom waveforms wasn’t enough for the incredibly ambitious Nintendo of 1983. While this capability was not included in US-released NESes, Japanese Famicoms are capable of sending and receiving data from expansion chips in game cartridges. In addition to providing additional processing power, tools, or memory management capabilities, these expansion chips could open up additional sound channels on the Famicom. Some notable expansion chips are the Sunsoft 5B, which added additional square and noise waves to the sound of Mr. Gimmick!, Famicom Disc System (A Famicom add-on that allowed the loading of games from floppy discs) Audio, which offered the potential to employ wavetable synthesis, and the Konami VRC line of chips. Expansion chip composers often had to recompose game soundtracks for US release due to the lack of expanded sound channels. This difference can be heard in titles like Konami’s Castlevania III: Dracula’s Curse, for which the music was composed with the capabilities of the VRC6, with two extra pulse waves and a sawtooth wave, in mind.
 
@@ -50,11 +50,11 @@ However, even five channels and custom waveforms wasn’t enough for the incredi
 	Your computer does not support HTML in-line audio.
 </audio>
 
-> *Stage 1 from* Akumajou Densetsu *(JP) and* Castlevania III: Dracula's Curse *(US). The music was recomposed for the US version without expanded sound. [Listen on YouTube](https://youtu.be/Rh-vkpjyMTw)*
+> *Stage 1 from Akumajou Densetsu (JP) and Castlevania III: Dracula's Curse (US). The music was recomposed for the US version without expanded sound. [Listen on YouTube](https://youtu.be/Rh-vkpjyMTw)*
 	
 The player two controller on only the original Famicom (the Japanese name for the NES) with directly wired, non-removable controllers had a small-diaphragm condenser microphone instead of start and select buttons[^greathierophant]. This microphone is only capable of simple amplitude recognition, so a small assortment of games including Japanese versions of *The Legend of Zelda* and *Raid on Bungeling Bay* encourage the players to blow into the mic to destroy enemies, interact with NPCs, or trigger events. 
 
-The Super Mario franchise piece I’ve chosen to represent the NES is “Overworld” from Super Mario Bros. 3 (1998), composed by Koji Kondo. While many would choose the main theme from the original Super Mario Bros., I believe “Overworld” is a better representative because it includes a demonstration of the capabilities of channel five with a frequently used “steel drum” sound sample:
+The Super Mario franchise piece I’ve chosen to represent the NES is “Overworld” from *Super Mario Bros. 3* (1998), composed by Koji Kondo. While many would choose the main theme from the original *Super Mario Bros.*, I believe “Overworld” is a better representative because it includes a demonstration of the capabilities of channel five with a frequently used “steel drum” sound sample:
 
 <audio
 	controls
@@ -76,7 +76,7 @@ The first two sound channels on the Game Boy are pulse waves. Each channel can p
 	Your computer does not support HTML in-line audio.
 </audio>
 
-> *An example of noise mode 1 on the Game Boy is the "bonk" sound from* The Legend of Zelda: Link's Awakening.
+> *An example of noise mode 1 on the Game Boy is the "bonk" sound from The Legend of Zelda: Link's Awakening.*
 
 The Game Boy’s fourth channel is a delta modulation channel that is a fair bit more advanced than that of the NES. The GB DMC comes equipped with a 32-byte wave table that stores a waveform as  64-sample, 4-bit PCM. One weakness of this system is that hot-swapping the values in the wave table will cause artifacts in the sound Game Boy carts could store up to 4MB, four times the capacity of the largest NES carts, making the use of the DMC significantly more common. Since the GB lacked a triangle wave channel, many developers (such as Hip Tanaka, composer for Super Mario Land) chose to use it to add in another basic waveform, but one iconic example of DMC ingenuity is the “pika!” voice sample played on the title screen of Pokémon Yellow, voice acted by the same actor who voices Pikachu in the Pokémon anime, Ikue Ootani:
 
@@ -90,9 +90,9 @@ While the Game Boy did not have expansion chips, Nintendo left in the capability
 
 One reason the Game Boy is favored over the NES by chiptune music composers (besides the obvious benefit of portability) is that the Game Boy is capable of stereo audio! Each channel DAC was capable of sending its audio to the left channel, the right channel, or both. While the Game Boy’s built-in speaker is monaural, the 3.5mm headphone jack outputs stereo audio.
 
-I’ve chosen “Birabuto Kingdom” from Super Mario Land, composed by Hip Tanaka, to represent the Game Boy. Despite Super Mario Land being a Game Boy launch title, this song demonstrates almost every exciting feature of the GB APU, with the percussion loop moving in stereo and the DMC generating a triangle wave to fill in the bass part. Any discussion of Nintendo game audio would be incomplete without the work of Hip Tanaka, who stood toe-to-toe with the revered Koji Kondo in compositional skill, ingenuity, and legacy.
+I’ve chosen “Birabuto Kingdom” from *Super Mario Land*, composed by Hip Tanaka, to represent the Game Boy. Despite *Super Mario Land* being a Game Boy launch title, this song demonstrates almost every exciting feature of the GB APU, with the percussion loop moving in stereo and the DMC generating a triangle wave to fill in the bass part. Any discussion of Nintendo game audio would be incomplete without the work of Hip Tanaka, who stood toe-to-toe with the revered Koji Kondo in compositional skill, ingenuity, and legacy.
 
-> For more on Hip Tanaka, I highly recommend listening to [“The Music of Hip Tanaka” by The Frame Savers](https://soundcloud.com/theframesavers/tfs-pocket-43-the-music-of-hip-tanaka).
+> *For more on Hip Tanaka, I highly recommend listening to [“The Music of Hip Tanaka” by The Frame Savers](https://soundcloud.com/theframesavers/tfs-pocket-43-the-music-of-hip-tanaka).*
 
 <audio
 	controls
@@ -116,7 +116,7 @@ Thanks to Kutaragi’s S-SMP, the SNES is capable of playing 8 wavetable synthes
 	Your computer does not support HTML in-line audio.
 </audio>
 
-> *To understand the scope of the S-SMP’s variety, compare Mega Man X3’s “Crush Crawfish” to the samples from Super Mario World.*
+> *To understand the scope of the S-SMP’s variety, compare Mega Man X3’s “Crush Crawfish” to the samples from Super Mario World. [Listen on YouTube](https://youtu.be/lbrSG6Hyf0Y)*
 
 The S-SMP’s wavetable synthesis is supplemented by a small library of effects. The most iconic SNES effect is the SNES’ echo unit, which is capable of applying an echo to any of the SNES’ audio channels with adjustable delay, feedback, pan, and EQ[^snesdevmanual]:
 
@@ -132,7 +132,7 @@ The SNES also had a single noise generator, which I can only assume is identical
 
 Like the Game Boy, the SNES is capable of taking additional audio from the cartridge, but this time in stereo[^caitsith2]. These audio pins are used for most of the SNES’ add-ons, including the Super Game Boy, an attachment that allows playing Game Boy games through the SNES on a television, and the BS Satellaview, an internet-connected extension that allowed games and special content to be distributed periodically a la television programming. Cartridge audio in likely would have been used for the never-released SNES CD, one of Ken Kutaragi’s less successful projects.
 
-My song choice to represent the SNES in the Super Mario franchise is “Overworld” from Super Mario World, composed by Koji Kondo. This song uses a variety of unique sounds, including a steel drum similar to the one used in Super Mario Bros. 3, and demonstrates Koji Kondo’s vision of the Mario sound.
+My song choice to represent the SNES in the *Super Mario* franchise is “Overworld” from *Super Mario World*, composed by Koji Kondo. This song uses a variety of unique sounds, including a steel drum similar to the one used in *Super Mario Bros. 3*, and demonstrates Koji Kondo’s vision of the "Mario sound."
 
 <audio
 	controls
@@ -146,11 +146,13 @@ My song choice to represent the SNES in the Super Mario franchise is “Overworl
 
 Nintendo’s next console was truly a child of the spirit of ‘90s innovation. The Nintendo Virtual Boy, released in 1995, is a 32-bit home console designed to play 3D VR games with seperate screens built into the console for each eye instead of a TV output. For audio, it was equipped with stereo speakers and a stereo headphone jack. While this console was absolutely revolutionary, it completely failed due to continuously lowered project budget, repeated cuts of promised features, an extremely small library of games (22 to be exact, with even less released in the US), and 3D technology that wasn’t quite advanced enough to impress consumers. Thanks to the Virtual Boy’s status as a sort of cult favorite, it was by far the most well-documented console within the scope of my research, with sites like Planet Virtual Boy having thorough memory maps and archives of official Nintendo documents in fair supply.
 
-The Virtual Boy’s audio system is loosely similar to the S-SMP. It is capable of playing 10-bit, 41.7kHz audio from five wavetable synthesis channels and one noise generator channel (Guy Perfect). However, the Virtual Boy’s maximum cart size of 2MB meant that VB games could not use as many different samples as SNES games often did (Planet Virtual Boy “Hardware”). The VB’s wave tables, one for each of the five wave channels, stored 32-sample, 6-bit PCM waves (“Virtual Boy Development Manual” 133). A notable drawback of the VB APU is that the wave tables cannot be written to unless every sound channel is disabled. Each channel is equipped with a linear increase or decrease volume envelope and 4-bit stereo spread. The last wave channel has a unit that can perform linear frequency sweep or frequency modulation based on a wave stored in a separate modulation RAM bank (147). The sixth audio channel on the VB is a noise generator. While the generator uses the same LFSR as other consoles, the Virtual Boy had eight distinct noise modes, different based on what bits were exclusive-or’d, allowing a wide spectrum of noise tones.
+The Virtual Boy’s audio system is loosely similar to the S-SMP. It is capable of playing 10-bit, 41.7kHz audio from five wavetable synthesis channels and one noise generator channel[^guyperfect]. However, the Virtual Boy’s maximum cart size of 2MB meant that VB games could not use as many different samples as SNES games often did [^planetvb]. The VB’s wave tables, one for each of the five wave channels, stored 32-sample, 6-bit PCM waves[^vbdevmanual]. A notable drawback of the VB APU is that the wave tables cannot be written to unless every sound channel is disabled. Each channel is equipped with a linear increase or decrease volume envelope and 4-bit stereo spread. The last wave channel has a unit that can perform linear frequency sweep or frequency modulation based on a wave stored in a separate modulation RAM bank[^vbdevmanual]. The sixth audio channel on the VB is a noise generator. While the generator uses the same LFSR as other consoles, the Virtual Boy had eight distinct noise modes, different based on what bits were exclusive-or’d, allowing a wide spectrum of noise tones.
 
-The Virtual Boy had pins for stereo audio input and output from the cartridge (Project: Virtual Boy). It is unknown if these were ever used, but given the extremely small library of games, lack of extension peripherals, and the number of promised features that the Virtual Boy failed to deliver on, the odds of their use are extremely low.
+The Virtual Boy had pins for stereo audio input and output from the cartridge[^projectvb]. It is unknown if these were ever used, but given the extremely small library of games, lack of extension peripherals, and the number of promised features that the Virtual Boy failed to deliver on, the odds of their use are extremely low.
 
-The only Mario games released on the Virtual Boy were spinoffs including Mario’s Tennis (not to be confused with Mario Tennis for the Game Boy Color) and Mario Clash (a unique, 3D take on classic Mario Bros. gameplay), so I’ve chosen a sample from Virtual Boy Wario Land, composed by Kazumi Totaka, to represent this console. Stage 2’s theme makes ample use of the envelopes and pitch modulation features of the Virtual Boy.
+The only *Mario* games released on the Virtual Boy were spinoffs including *Mario’s Tennis* (not to be confused with *Mario Tennis* for the Game Boy Color) and *Mario Clash* (a unique, 3D take on classic *Mario Bros.* gameplay), so I’ve chosen a sample from *Virtual Boy Wario Land*, composed by Kazumi Totaka, to represent this console. Stage 2’s theme makes ample use of the envelopes and pitch modulation features of the Virtual Boy.
+
+> *Inline recording coming soon. [Listen on YouTube](https://youtu.be/TZ227-W0kto)*
 
 ### The Nintendo 64
 
