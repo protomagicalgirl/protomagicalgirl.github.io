@@ -19,6 +19,6 @@
 | page | content | link |
 | :--- | :------ | :--- |
 | /vgaudio | video game audio project | [/vgaudio](/vgaudio) |
-| /vgaudio/nintendium | vg audio academic paper | [/vgaudio/nintendium] |
+| /vgaudio/nintendium | vg audio academic paper | [/vgaudio/nintendium](/vgaudio/nintendium) |
 | /lfsr | NES LFSR emulation | [/lsfr](/lfsr) |
 | /metroidsaves | NES Metroid EverDrive save states pack | [/metroidsaves](/metroidsaves) |
