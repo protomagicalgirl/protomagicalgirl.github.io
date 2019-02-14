@@ -1,5 +1,7 @@
 ## Full Bibliography
 
+[Back to the paper!](/vgaudio/nintendium)
+
 ---, Project: Virtual Boy. “Cartridge Pinout” [http://www.projectvb.com/tech/cartpinout.html](http://www.projectvb.com/tech/cartpinout.html)
 
 ---, Shmupulations. “Koji Kondo - 2001 Composer Interview.” Translated from Japanese. [http://shmuplations.com/kojikondo/](http://shmuplations.com/kojikondo/)
